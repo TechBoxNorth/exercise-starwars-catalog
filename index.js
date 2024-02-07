@@ -1,4 +1,6 @@
-const swapi = 'https://swapi.dev/api/';
+let characters = [];
+
+const swapi = 'https://swapi.dev/api/people/';
 async function fetchSwapi(){
     try {
         response = await fetch(swapi);
@@ -10,5 +12,9 @@ async function fetchSwapi(){
 }
 
 fetchSwapi().then((data) => {
-    console.log(data);
+    console.log(data.results[1].name);
+    for(let i = 0; i < data.results.length; i++){
+        console.log(data.results[i].name);
+        characters.push(data.results[i]);
+    }
 });
