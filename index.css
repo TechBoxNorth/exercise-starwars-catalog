@@ -1,6 +1,14 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    --main-bg: #292c1f;
+    --section-bg: #454531;
+    --border: #fce798;
+}
+
+@font-face {
+    font-family: 'Starwars';
+        src: url('assets/Starjedi.ttf');
 }
 
 .container {
@@ -8,7 +16,7 @@
     max-width: 1440px;
     height: 1060px;
     margin: auto;
-    background-color: black;
+    background-color: var(--main-bg);
 }
 
 .hero {
@@ -16,4 +24,51 @@
     height: 450px;
     background-image: url('assets/hero-bg.jpg');
     background-size: cover;
+}
+
+.title {
+    width: 30%;
+    font-family: 'Starwars';
+    font-size: 64px;
+    text-align: center;
+    text-shadow: 
+        3px 3px 2px black,
+        -3px -3px 2px black,
+        -3px -3px 2px black,
+        3px 3px 2px black
+    ;
+    line-height: 100%;
+    color: var(--border);
+    position: relative;
+    transform: translate(10%, 40%);
+    /*background-color: pink;*/
+}
+
+main {
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+    height: 620px;
+    position: absolute;
+    transform: translateY(-10%);
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+}
+
+.selection {
+    width: 34%;
+    height: 100%;
+    background-color: var(--section-bg);
+    border-radius: 16px;
+    border: 6px solid var(--border);
+}
+
+.details {
+    width: 34%;
+    height: 100%;
+    background-color: var(--section-bg);
+    border-radius: 16px;
+    border: 6px solid var(--border);
 }
