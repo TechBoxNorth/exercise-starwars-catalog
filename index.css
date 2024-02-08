@@ -132,7 +132,7 @@ main {
 
 .info-tabs {
     background-color: var(--odd-character);
-    height: 8%;
+    height: 6%;
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -147,7 +147,7 @@ main {
     background-color: var(--section-bg);
     text-align: center;
     border-radius: 10px 10px 0 0;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .extra-info {
