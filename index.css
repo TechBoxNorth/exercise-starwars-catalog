@@ -5,6 +5,8 @@
     --section-bg: #454531;
     --border: #fce798;
     --body-bg: #1d141b;
+    --odd-character: #889883;
+    --even-character: #c5c6c5;
 }
 
 @font-face {
@@ -76,10 +78,9 @@ main {
 .selection-top {
     width: 100%;
     height: 72px;
-    background-color: var(--main-bg);
     color: var(--border);
     font-family: 'Poppins', sans-serif;
-    font-size: 36px;
+    font-size: 42px;
     padding-top: 16px;
     text-align: center;
     border-radius: 16px 16px 0 0;
@@ -89,10 +90,68 @@ main {
     width: 100%;
 }
 
+.list-item {
+    font-family: 'Poppins', sans-serif;
+    color: var(--body-bg);
+    font-size: 20px;
+    padding: 12px;
+}
+
+.list-nav {
+    color: var(--border);
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    padding: 10px;
+    text-align: center;
+}
+
 .details {
     width: 34%;
     height: 100%;
     background-color: var(--section-bg);
     border-radius: 16px;
     border: 6px solid var(--border);
+}
+
+.details-top {
+    width: 100%;
+    height: 72px;
+    color: var(--border);
+    font-family: 'Poppins', sans-serif;
+    font-size: 42px;
+    padding-top: 16px;
+    text-align: center;
+    border-radius: 16px 16px 0 0;
+}
+
+.character-info {
+    font-family: 'Poppins', sans-serif;
+    height: 45%;
+    background-color: var(--odd-character);
+}
+
+.info-tabs {
+    background-color: var(--odd-character);
+    height: 8%;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding-left: 20px;
+}
+
+.tab {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    color: var(--border);
+    width: 20%;
+    background-color: var(--section-bg);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    padding-top: 15px;
+}
+
+.extra-info {
+    margin-bottom: 0;
+    height: 35.5%;
+    border-radius: 0 0 16px 16px;
 }

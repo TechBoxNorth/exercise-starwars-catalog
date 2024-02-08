@@ -26,9 +26,9 @@ function addCharactersToDom(){
         person.classList.add('list-item');
         person.innerText = characters[i].name;
         if(i % 2 === 0){
-            person.style.backgroundColor = 'red';
+            person.style.backgroundColor = 'var(--even-character)';
         } else {
-            person.style.backgroundColor = 'blue';
+            person.style.backgroundColor = 'var(--odd-character)';
         }
         
         selectionList.appendChild(person);
