@@ -90,6 +90,10 @@ main {
     width: 100%;
 }
 
+.selection-list:hover {
+    cursor: pointer;
+}
+
 .list-item {
     font-family: 'Poppins', sans-serif;
     color: var(--body-bg);
@@ -103,6 +107,10 @@ main {
     font-size: 42px;
     padding: 10px;
     text-align: center;
+}
+
+.arrow:hover {
+    cursor: pointer;
 }
 
 .details {
@@ -148,6 +156,10 @@ main {
     text-align: center;
     border-radius: 10px 10px 0 0;
     padding-top: 10px;
+}
+
+.tab:hover {
+    cursor: pointer;
 }
 
 .extra-info {

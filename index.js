@@ -20,6 +20,10 @@ fetchPeople().then((data) => {
     addCharactersToDom();
 });
 
+selectionList.addEventListener('click',(e) => {
+
+});
+
 function addCharactersToDom(){
     for(let i = 0; i < characters.length; i++) {
         let person = document.createElement('div');
