@@ -40,6 +40,15 @@ const selection = document.querySelector('.selection');
 selection.addEventListener('click',(e) => {
     if(e.target.classList.contains('list-item')){
         displayCharacterData(e);
+        const tempList = document.querySelector('.selection-list').children;
+        for(let i = 0; i < tempList.length; i++){
+            if(tempList[i].listId === e.target.listId){
+                tempList[i].style.backgroundColor = 'var(--border)';
+            } else {
+                tempList[i].style.backgroundColor = tempList[i].bgc;
+            }
+        }
+
     }/*else if(e.target.classList.contains('left')){
         console.log('clicked on left arrow');
     }else if(e.target.classList.contains('right')){
@@ -54,12 +63,15 @@ function addCharactersToDom(){
         let person = document.createElement('div');
         person.classList.add('list-item');
         person.listId = i;
+        person.selected = false;
         person.innerText = characters[i].name;
         if(i % 2 === 0){
-            person.style.backgroundColor = 'var(--even-character)';
+            person.bgc = 'var(--even-character)';
+            person.style.backgroundColor = person.bgc;
             person.style.color = 'black';
         } else {
-            person.style.backgroundColor = 'var(--odd-character)';
+            person.bgc = 'var(--odd-character)';
+            person.style.backgroundColor = person.bgc;
             person.style.color = 'white';
         }
         
