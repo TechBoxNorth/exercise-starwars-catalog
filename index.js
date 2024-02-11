@@ -36,6 +36,7 @@ fetchPeople('/people/').then((data) => {
 console.log(characters)
 
 // click on character in list
+const currentItemNum = document.querySelector('.current-item');
 const selection = document.querySelector('.selection');
 const charList = document.querySelector('.selection-list').children;
 selection.addEventListener('click',(e) => {
@@ -45,6 +46,7 @@ selection.addEventListener('click',(e) => {
             if(charList[i].listId === e.target.listId){
                 charList[i].style.backgroundColor = 'var(--border)';
                 charList[i].selected = true;
+                currentItemNum.innerText = charList[i].listId + 1;
             } else {
                 charList[i].style.backgroundColor = charList[i].bgc;
                 charList[i].selected = false;
@@ -57,6 +59,7 @@ selection.addEventListener('click',(e) => {
                 displayNextPrevCharData(charList[i - 1].listId);
                 charList[i - 1].style.backgroundColor = 'var(--border)';
                 charList[i - 1].selected = true;
+                currentItemNum.innerText = charList[i - 1].listId + 1;
                 charList[i].style.backgroundColor = charList[i].bgc;
                 charList[i].selected = false;
             }
@@ -69,8 +72,8 @@ selection.addEventListener('click',(e) => {
                 charList[i].selected = false;
                 charList[i + 1].style.backgroundColor = 'var(--border)';
                 charList[i + 1].selected = true;
+                currentItemNum.innerText = charList[i + 1].listId + 1;
                 displayNextPrevCharData(charList[i + 1].listId);
-                //console.log(charList[i + 1]);
                 return
             }
         }
